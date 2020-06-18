@@ -4,8 +4,18 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    product = 1
+    product_list = [] # final list to hold the values of each product
+    for i in range(0, len(arr)):
+        for j in arr: #for each number in arr
+            #if j is different from the current number of number (i),\
+           # then multiply it by the product, else it is ignored
+           if j != arr[i]:
+               product *= j
+        product_list.append(product)  # add product to the product_list list
+        product = 1 # restart the product variable
+    return product_list        
+    
 
 
 if __name__ == '__main__':

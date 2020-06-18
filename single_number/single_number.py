@@ -4,8 +4,15 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    no_duplicate = []
+    for i in arr:
+        if i not in no_duplicate:
+            no_duplicate.append(i)
+        else:
+            no_duplicate.remove(i)  
+    return no_duplicate.pop()             
 
-    pass
+  #   Time complexity:O(n)
 
 
 if __name__ == '__main__':
